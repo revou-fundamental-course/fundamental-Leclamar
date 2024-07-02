@@ -91,6 +91,7 @@ section {
 }
 
 .result {
+    padding-left: 17px;
     height: 300px;
     width: 49%;
     border: 1px solid;

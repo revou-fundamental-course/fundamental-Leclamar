@@ -6,6 +6,7 @@
     </head>
 
     <body>
+        <script src="js/script.js"></script>
         <header>
             <div class="logo">
                 <img src="assets/Genshin Impact Furina Emblem - Constellation Wall And Art Print.jpeg">
@@ -21,7 +22,7 @@
         <p class="garis"></p>
 
         <section id="home">
-            <div class="sapa">Hai Diriku!</div>
+            <div class="sapa">Hai <span>User!</span></div>
             <p> Selamat datang yeah tjuy </p>
             <br>
 
@@ -63,18 +64,18 @@
 
             <article class="message-us">
                 <div class="form">
-                    <form target="_self">
+                    <form name="form-message-us" target="_self">
                         <table>
                             <tr>
                                 <th> <label>Nama Lengkap</label></th>
                                 <td> : </td>
-                                <td> <input type="text" id="nama-lengkap" name="nama-lengkap" placeholder="Type Here" required> </td>
+                                <td> <input type="text" id="nama-lengkap" name="nama-lengkap" placeholder="Type Here" > </td>
                             </tr>
 
                             <tr>
                                 <th><label>Tanggal Lahir</label></th>
                                 <td class="sd"> : </td>
-                                <td><input type="date" id="birth" name="birth" required></td>
+                                <td><input type="date" id="birth" name="birth" ></td>
                             </tr>
 
                             <tr> 
@@ -82,7 +83,7 @@
                                 <td class="sd"> : </td>
                                 <td>
                                     <label for="perempuan">
-                                        <input type="radio" id="perempuan" name="gender" value="Perempuan" required>
+                                        <input type="radio" id="perempuan" name="gender" value="Perempuan">
                                         Perempuan
                                     </label>
                                     <label for="laki-laki">
@@ -97,7 +98,7 @@
                                 <td><textarea id="pesan" name="pesan" rows="8" placeholder="Type here"></textarea></td>
                             </tr>
                             <tr>
-                                <td colspan="3"><input type="submit" id="submit" value="Submit"></td>
+                                <td colspan="3"><input onclick="validateForm()" type="submit" id="submit" value="Submit"></td>
                             </tr>
                         </table>
                         
@@ -105,7 +106,10 @@
                 </div>
 
                 <div class="result">
-
+                    <p> Nama: <span id="sender-full-name"></span></p>
+                    <p> Tanggal: <span id="sender-birth"></span></p>
+                    <p> Jenis Kelamin: <span id="sender-gender"></span></p>
+                    <p> Pesan: <span id="sender-messages"></span></p>
                 </div>
             </article>
         </section>

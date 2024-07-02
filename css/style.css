@@ -1,11 +1,14 @@
+
+/* Styling */
 body {
     background-image: linear-gradient(310deg, #c2cbee, #ffe9f4);
     color: #345591;
+    font-size: 110%;
 }
 
 .logo > img {
     height: 75px;
-    width: 75px;
+    width: auto;
     border-radius: 100%;
 }
 
@@ -67,7 +70,7 @@ section {
 
 .profiles {
     padding-left: 75px;
-    padding-right: 35%;
+    padding-right: 30%;
     display: flex;
     justify-content: space-between;
 }
@@ -91,10 +94,10 @@ section {
 }
 
 .result {
+    padding-top: 15px;
     padding-left: 17px;
     height: 300px;
     width: 49%;
-    border: 1px solid;
 }
 
 .message-us {
@@ -115,7 +118,7 @@ input[type=date] {
 }
 
 table {
-    width: 100%;
+    max-width: 100%;
 }
 
 th {
@@ -141,4 +144,13 @@ footer {
 
 #pesan {
     width: -webkit-fill-available;
+}
+
+#eq1, #eq2, #eq3, #eq4 {
+    width: 5px;
+}
+
+#sender-full-name, #sender-birth, #sender-gender, #sender-messages {
+    max-width: 50%;
+    height: auto;
 }

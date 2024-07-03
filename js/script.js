@@ -1,23 +1,31 @@
-function submit (event) {
+function anti (event) {
     event.preventDefault(); 
     }
 
-
 let person = prompt("Please enter your name", "Furina de Fontaine");
 document.getElementById("username").innerHTML = person;
+
+let slideIndex = 0;
+tapSlide();
+
+function tapSlide(){
+    let images = document.getElementsByClassName("img");
     
+    for(let i = 0; i < images.length; i++){
+        images[i].style.display = "none";
+    }
+    
+    if (slideIndex > (images.length -1)) {
+        slideIndex = 0;
+    }
+    images[slideIndex].style.display = "block";
+    console.log(slideIndex);
 
+    slideIndex ++;
 
+    setTimeout(tapSlide, 2895);
 
-/* function username () {
-    var visiter = prompt("Hey, welcome! Please type your name ^^","");
-    document.getElementById("user").innerHTML = visiter;
-} */
-
-/* if (visiter==""){
-    username();
-} */
-
+}
 
 function validate() {
     const name = document.forms["form-message-us"]["nama-lengkap"].value
@@ -27,11 +35,11 @@ function validate() {
 
     if (name == "" || birth == "" || gender == "" || pesan == "") {
         alert("Hey, tolong diisi ya!");
-        document.getElementById('form-message-us').addEventListener('submit',submit);
+        document.getElementById('form-message-us').addEventListener('submit',anti);
         return false;
     }
 
-    document.getElementById('form-message-us').addEventListener('submit',submit);
+    document.getElementById('form-message-us').addEventListener('submit',anti);
     document.getElementById("date-now").innerHTML = Date();
 
     result(name, birth, gender, pesan);
@@ -55,4 +63,5 @@ function result(name, birth, gender, pesan){
     document.getElementById("sender-gender").innerHTML = gender;
     document.getElementById("sender-messages").innerHTML = pesan;
 }
+
 

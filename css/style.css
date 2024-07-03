@@ -2,9 +2,21 @@
 /* Styling */
 body {
     background-image: linear-gradient(310deg, #c2cbee, #ffe9f4);
+    animation: fade-bg 8.9s;
+    animation-fill-mode: both;
     color: #345591;
     font-size: 110%;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 480;
+    font-style: normal;
 }
+
+@keyframes fade-bg {
+    form {background-image: linear-gradient(310deg, #c2cbee, #ffe9f4);}
+    to {background-image: linear-gradient(310deg, #f8dbee, #b6c8ed);}
+}
+
 
 .logo > img {
     height: 75px;
@@ -63,9 +75,16 @@ section {
     font-size: 280%;
 }
 
-.banner > img {
+@keyframes fadeIn {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+
+.img {
     width: 100%;
     height: auto;
+    box-sizing: border-box;
+    animation: fadeIn 1.7s;
 }
 
 .profiles {

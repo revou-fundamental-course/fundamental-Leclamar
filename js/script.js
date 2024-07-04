@@ -61,5 +61,3 @@ function result(name, birth, gender, pesan){
     document.getElementById("sender-gender").innerHTML = gender;
     document.getElementById("sender-messages").innerHTML = pesan;
 }
-
-

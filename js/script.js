@@ -19,11 +19,9 @@ function tapSlide(){
         slideIndex = 0;
     }
     images[slideIndex].style.display = "block";
-    console.log(slideIndex);
-
     slideIndex ++;
 
-    setTimeout(tapSlide, 2895);
+    setTimeout(tapSlide, 5000);
 
 }
 
